@@ -25,3 +25,14 @@ const product = (n) => {
 	return n * product(n + 1);
 };
 console.log(product(2));
+
+const sequenceSum = (begin, end) => {
+	if (begin === end) {
+		return begin;
+	} else if (begin > end) {
+		return NaN;
+	}
+
+	return begin + sequenceSum(begin + 1, end);
+};
+console.log(sequenceSum(2, 6));
